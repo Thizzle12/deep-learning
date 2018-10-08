@@ -1,0 +1,40 @@
+#canvas-container{
+  width: 100%;
+}
+
+#canvas{
+  border: 5px solid black;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#button-container{
+  width: 100%;
+}
+
+#clear-canvas{
+  background-color: #00ff6f;
+  color: black;
+}
+
+#predict{
+  background-color: #00DCFF;
+  font-size: 18px !important;
+  color:black;
+  padding-top: 5px;
+}
+
+.number-prediction-button{
+  display: block;
+  width: 100px;
+  height: 33px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 25px;
+  margin: 0 auto;
+  margin-top: 10px;
+}

@@ -1,0 +1,35 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.grid-item {
+  cursor: pointer;
+  background-color: #00DCFF;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  height: 166.66px;
+  width: 166.66px;
+
+}
+
+.grid-item h2{
+  font-size: 60px;
+  vertical-align: middle !important;
+}
+
+#resetButton{
+  width: 100px;
+  text-align: center;
+  background: #00ff6f;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 10px;
+}

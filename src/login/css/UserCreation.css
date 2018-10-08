@@ -1,0 +1,64 @@
+#create-user-div{
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-radius: 5px;
+   box-shadow: 10px 10px 10px #aaaaaa;
+}
+
+.title{
+  text-align: center;
+}
+
+.input-div{
+  margin: 20px auto;
+  position: relative;
+}
+
+.input-label{
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+.input-field{
+  border: 1px solid #ccc;
+  margin:10px auto;
+  padding:10px;
+  display: block;
+  border-radius: 10px;
+  width: 40%;
+}
+
+.selection-box{
+  width: 20%;
+  margin: 10px;
+  display: block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+#age-selection{
+  border-radius: 5px 0px 0px 0px;
+}
+
+#gender-selection{
+  border-radius: 0px 5px 0px 0px;
+}
+
+.age-option{
+
+}
+
+#create-user-btn{
+  background-color: lightgreen;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 120px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
