@@ -8,6 +8,7 @@ import AiImg2 from './image/ai2.jpg'
 import AiImg3 from './image/ai3.jpg'
 import TicTacToeImg from './image/tictactoe.png'
 import Coverflow from 'react-coverflow';
+import Login from './login/Login'
 import { StyleRoot } from 'radium';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -17,10 +18,24 @@ class MainPage extends Component{
     super(props);
 
     this.state = {
-      active: 0
+      active: 0,
+      login: false,
     };
   }
 
+  toggleLogin = () =>{
+    this.setState({
+      login: !this.state.login
+    })
+  }
+
+  logout = () =>{
+    console.log("Click")
+    sessionStorage.setItem('id', undefined)
+    this.setState({
+      loggedIn : false,
+    })
+  }
 
   redirect = (path) => {
     console.log(path)
@@ -29,6 +44,7 @@ class MainPage extends Component{
 
 
   render(){
+    console.log(sessionStorage.getItem('id'))
     return (
 
       <div>
@@ -38,11 +54,18 @@ class MainPage extends Component{
             <a className="info-button" href="#projects">Projects</a>
             <a className="info-button" href="#team">Team</a>
             <a className="info-button">About Us</a>
+            {(sessionStorage.getItem('id') === undefined || sessionStorage.getItem('id') === 'undefined')?<span>
+            <a className="info-button user-btn" onClick={() => this.redirect("createuser")}>Create User</a>
+            <a className="info-button user-btn" onClick={() => this.toggleLogin()}>Login</a></span>:
+            <a className="info-button user-btn" onClick={() => this.logout()}>Logout</a>
+            }
             <a href="#team"><img id="menu-icon" src={MenuPic}/></a>
           </nav>
+          {this.state.login ? <Login toggleLogin={this.toggleLogin}/> : <span></span>}
           <h1 id="front-page-title">The Art of Deep Learning</h1>
           <h2 id="front-page-info">This website is an attempt to create different kinds of AI using Deep Learning</h2>
         </header>
+
         <div id="projects">
           <h1>Projects</h1>
           <StyleRoot >
@@ -54,15 +77,23 @@ class MainPage extends Component{
             clickable={true}
             enableHeading
             media={{
-              '@media (max-width: 600px)': {
-                width: '300px',
-                height: '150px'
-              },
-              '@media (max-width: 900px)': {
-                width: '300px',
-                height: '150px'
+              '@media (min-width: 700px)': {
+                width: '600px',
+                height: '300px'
               },
               '@media (min-width: 900px)': {
+                width: '700px',
+                height: '350px'
+              },
+              '@media (min-width: 1100px)': {
+                width: '900px',
+                height: '450px'
+              },
+              '@media (min-width: 1300px)': {
+                width: '1100px',
+                height: '650px'
+              },
+              '@media (min-width: 1300px)': {
                 width: '1320px',
                 height: '660px'
               }

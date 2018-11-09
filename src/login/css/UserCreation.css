@@ -31,20 +31,37 @@
   border-radius: 10px;
   width: 40%;
 }
-
+#BaG-container{
+  width: 100%;
+  text-align: center;
+}
 .selection-box{
-  width: 20%;
-  margin: 10px;
-  display: block;
+  width: 50%;
+  margin: 10px auto;
+  display: inline-block;
   padding: 10px;
   border: 1px solid #ccc;
   text-align: center;
 }
-
-#age-selection{
+#yob-div{
+  display: inline-block !important;
+  width: 50%;
+}
+#yob-label{
+  width: 100%;
+  margin: 0 !important;
+}
+#yob-selection{
   border-radius: 5px 0px 0px 0px;
 }
-
+#gender-div{
+  display: inline-block !important;
+  width: 50%;
+}
+#gender-label{
+  width: 100%;
+  margin: 0 !important;
+}
 #gender-selection{
   border-radius: 0px 5px 0px 0px;
 }

@@ -61,6 +61,10 @@ function createUser(user, cb){
   postCall("/api/user/", user, cb)
 }
 
+function login(objectBody, cb){
+  postCall("/api/user/login", objectBody, cb)
+}
 
-const ServerCalls = { sendTicTacToeMove, predictNumber, createUser };
+
+const ServerCalls = { sendTicTacToeMove, predictNumber, createUser, login };
 export default ServerCalls;
